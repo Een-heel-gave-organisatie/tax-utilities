@@ -1,0 +1,46 @@
+{
+  "connectorName": "Tax",
+  "operationName": "propertyTax",
+  "title": "Calculate Property Tax",
+  "help": "Calculates property tax by adding 5% to the income tax amount",
+  "elements": [
+    {
+      "type": "attributeGroup",
+      "value": {
+        "groupName": "Input",
+        "elements": [
+          {
+            "type": "attribute",
+            "value": {
+              "name": "incomeTax",
+              "displayName": "Income Tax",
+              "inputType": "stringOrExpression",
+              "defaultValue": "",
+              "required": "true",
+              "helpTip": "Income tax value as a string"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "attributeGroup",
+      "value": {
+        "groupName": "Output",
+        "elements": [
+          {
+            "type": "attribute",
+            "value": {
+              "name": "targetVariable",
+              "displayName": "Output Variable Name",
+              "inputType": "string",
+              "deriveResponseVariable": true,
+              "required": "true",
+              "helpTip": "Name of the variable to store the calculated property tax value"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

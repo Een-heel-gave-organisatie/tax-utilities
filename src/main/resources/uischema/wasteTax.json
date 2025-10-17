@@ -1,0 +1,46 @@
+{
+  "connectorName": "Tax",
+  "operationName": "wasteTax",
+  "title": "Calculate Waste Tax",
+  "help": "Calculates waste tax based on income tax amount - free if >4000, otherwise fixed tax of 100",
+  "elements": [
+    {
+      "type": "attributeGroup",
+      "value": {
+        "groupName": "Input",
+        "elements": [
+          {
+            "type": "attribute",
+            "value": {
+              "name": "incomeTax",
+              "displayName": "Income Tax",
+              "inputType": "stringOrExpression",
+              "defaultValue": "",
+              "required": "true",
+              "helpTip": "Income tax value as a string"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "attributeGroup",
+      "value": {
+        "groupName": "Output",
+        "elements": [
+          {
+            "type": "attribute",
+            "value": {
+              "name": "targetVariable",
+              "displayName": "Output Variable Name",
+              "inputType": "string",
+              "deriveResponseVariable": true,
+              "required": "true",
+              "helpTip": "Name of the variable to store the calculated waste tax value"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

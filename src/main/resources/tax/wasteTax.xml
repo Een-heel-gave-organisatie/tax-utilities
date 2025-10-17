@@ -17,12 +17,10 @@
   ~ under the License.
   ~
   -->
-<connector>
-    <component name="tax" package="org.wso2.carbon.connector">
-        <dependency component="tax"/>
-        <description>WSO2 Tax Connector with Property Tax, Waste Tax, and Sewerage Fee calculations</description>
-    </component>
-    <displayName>Tax Module</displayName>
-    <icon>icon/icon-small.png</icon>
-    <type>module</type>
-</connector>
+<template name="wasteTax" xmlns="http://ws.apache.org/ns/synapse">
+    <parameter name="incomeTax" description="Income tax value as a string"/>
+    <parameter name="targetVariable" description="Name of the variable to store the calculated waste tax value"/>
+    <sequence>
+        <class name="org.wso2.carbon.esb.connector.tax.WasteTax"/>
+    </sequence>
+</template>

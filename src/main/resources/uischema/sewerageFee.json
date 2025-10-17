@@ -1,0 +1,46 @@
+{
+  "connectorName": "Tax",
+  "operationName": "sewerageFee",
+  "title": "Calculate Sewerage Fee",
+  "help": "Calculates sewerage fee which is a fixed value of 50 for everyone",
+  "elements": [
+    {
+      "type": "attributeGroup",
+      "value": {
+        "groupName": "Input",
+        "elements": [
+          {
+            "type": "attribute",
+            "value": {
+              "name": "incomeTax",
+              "displayName": "Income Tax",
+              "inputType": "stringOrExpression",
+              "defaultValue": "",
+              "required": "true",
+              "helpTip": "Income tax value as a string (required for consistency, though not used in calculation)"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "type": "attributeGroup",
+      "value": {
+        "groupName": "Output",
+        "elements": [
+          {
+            "type": "attribute",
+            "value": {
+              "name": "targetVariable",
+              "displayName": "Output Variable Name",
+              "inputType": "string",
+              "deriveResponseVariable": true,
+              "required": "true",
+              "helpTip": "Name of the variable to store the sewerage fee value"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

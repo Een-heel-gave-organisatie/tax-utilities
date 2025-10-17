@@ -20,14 +20,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.wso2.integration.module</groupId>
-    <artifactId>mi-module-utility</artifactId>
+    <artifactId>mi-module-tax</artifactId>
     <version>2.0.2-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <name>WSO2 Carbon - Utility Connector</name>
+    <name>WSO2 Carbon - Tax Connector</name>
     <url>http://wso2.org</url>
 
     <properties>
-        <connector.name>utility</connector.name>
+        <connector.name>tax</connector.name>
         <product.ei.version>6.5.0</product.ei.version>
         <synapse.version>4.0.0-wso2v215</synapse.version>
         <carbon.mediation.version>4.7.109</carbon.mediation.version>
@@ -100,7 +100,7 @@
                 <artifactId>maven-assembly-plugin</artifactId>
                 <executions>
                     <execution>
-                        <id>email-library</id>
+                        <id>tax-connector</id>
                         <phase>compile</phase>
                         <goals>
                             <goal>single</goal>
