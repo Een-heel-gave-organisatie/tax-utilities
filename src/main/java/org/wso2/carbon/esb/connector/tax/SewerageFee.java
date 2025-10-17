@@ -53,7 +53,7 @@ public class SewerageFee extends AbstractConnector {
             BigDecimal sewerageFee = FIXED_SEWERAGE_FEE;
 
             // Set the result in the specified variable
-            messageContext.setProperty(variableName, sewerageFee.toString());
+            messageContext.setVariable(variableName, sewerageFee.toString());
 
             if (log.isDebugEnabled()) {
                 log.debug("Sewerage fee set: " + sewerageFee);

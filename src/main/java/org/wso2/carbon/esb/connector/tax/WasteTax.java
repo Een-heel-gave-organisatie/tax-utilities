@@ -65,7 +65,7 @@ public class WasteTax extends AbstractConnector {
             }
 
             // Set the result in the specified variable
-            messageContext.setProperty(variableName, wasteTax.toString());
+            messageContext.setVariable(variableName, wasteTax.toString());
 
             if (log.isDebugEnabled()) {
                 log.debug("Waste tax calculated: " + wasteTax + " for income tax: " + incomeTax);
