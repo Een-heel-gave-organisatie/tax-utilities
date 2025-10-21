@@ -52,8 +52,12 @@ public class SewerageFee extends AbstractConnector {
             // Sewerage fee is fixed for everyone
             BigDecimal sewerageFee = FIXED_SEWERAGE_FEE;
 
+            // Add the sewerage fee to the incomeTaxValue and return
+            BigDecimal incomeTax = new BigDecimal(incomeTaxValue);
+            BigDecimal totalTax = incomeTax.add(sewerageFee);
+
             // Set the result in the specified variable
-            messageContext.setVariable(variableName, sewerageFee.toString());
+            messageContext.setVariable(variableName, totalTax.toString());
 
             if (log.isDebugEnabled()) {
                 log.debug("Sewerage fee set: " + sewerageFee);

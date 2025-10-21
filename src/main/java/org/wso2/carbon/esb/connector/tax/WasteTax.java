@@ -64,8 +64,11 @@ public class WasteTax extends AbstractConnector {
                 wasteTax = FIXED_WASTE_TAX;
             }
 
+            // Add the waste tax to the income tax and return
+            BigDecimal totalTax = incomeTax.add(wasteTax);
+            
             // Set the result in the specified variable
-            messageContext.setVariable(variableName, wasteTax.toString());
+            messageContext.setVariable(variableName, totalTax.toString());
 
             if (log.isDebugEnabled()) {
                 log.debug("Waste tax calculated: " + wasteTax + " for income tax: " + incomeTax);
